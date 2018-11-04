@@ -10,6 +10,8 @@ namespace ReverseLinkedList
     {
         static void Main(string[] args)
         {
+            //run tests project
+
             //MyLinkedList_Test1();
             //MyOrderedLinkedList_Test1();
             MyOrderedLinkedList_Test2();
