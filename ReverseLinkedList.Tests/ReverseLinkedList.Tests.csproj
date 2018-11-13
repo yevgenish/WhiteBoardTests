@@ -51,8 +51,10 @@
   <ItemGroup>
     <Compile Include="MyLinkedListTests.cs" />
     <Compile Include="MyOrderedLinkedListTests.cs" />
-    <Compile Include="ParenthesesVerifierTests.cs" />
+    <Compile Include="ParenthesesVerifierTests1.cs" />
+    <Compile Include="ParenthesesVerifierTests2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

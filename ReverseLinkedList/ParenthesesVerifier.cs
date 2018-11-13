@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReverseLinkedList
 {
-    public class ParenthesesVerifier
+    public class ParenthesesVerifier : IParenthesesVerifier
     {
         private enum PType
         {

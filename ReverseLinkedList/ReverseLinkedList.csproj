@@ -44,9 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IMyLinkedList.cs" />
+    <Compile Include="IParenthesesVerifier.cs" />
     <Compile Include="MLLElement.cs" />
     <Compile Include="MyLinkedList.cs" />
     <Compile Include="MyOrderedLinkedList.cs" />
+    <Compile Include="ParenthesesVerifier2.cs" />
     <Compile Include="ParenthesesVerifier.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

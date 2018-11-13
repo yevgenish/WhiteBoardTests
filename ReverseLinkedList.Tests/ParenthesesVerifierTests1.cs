@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace ReverseLinkedList.Tests
 {
-    [TestClass()]
-    public class ParenthesesVerifierTests
+    //[TestClass()]
+    //this class supports testing of multiple implementations of Perentheses Verifier
+    //Generics using implementation
+
+    public class ParenthesesVerifierTests1<TParenthesesVerifier>
+                where TParenthesesVerifier: IParenthesesVerifier, new()
     {
         [TestMethod()]
         public void IsValidEmpty()
@@ -17,7 +21,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "";
             bool expected = true;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -32,7 +36,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "{}";
             bool expected = true;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -47,7 +51,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "({})";
             bool expected = true;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -62,7 +66,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "[({})]";
             bool expected = true;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -77,7 +81,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "[({})]{";
             bool expected = false;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -93,7 +97,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "}[({})]";
             bool expected = false;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -108,7 +112,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "{{}[({})]";
             bool expected = false;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -125,7 +129,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "{{}}[({})]{)";
             bool expected = false;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -140,7 +144,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "{{}}[({})]{)(}";
             bool expected = false;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -155,7 +159,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "{{}}[({})]{}()[][][}](){}";
             bool expected = false;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -170,7 +174,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "{{}}[({})]{}()[][][}{](){}";
             bool expected = false;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -185,7 +189,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "{{}}[({})]";
             bool expected = true;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -200,7 +204,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "{{}}[({})]{}()[][][](){}";
             bool expected = true;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -215,7 +219,7 @@ namespace ReverseLinkedList.Tests
             //arrange
             string toCheck = "{{}}[({})]{}(){[][][](){}}";
             bool expected = true;
-            ParenthesesVerifier pv = new ParenthesesVerifier();
+            IParenthesesVerifier pv = new TParenthesesVerifier();
 
             //act
             bool actual = pv.IsValid(toCheck);
@@ -223,5 +227,17 @@ namespace ReverseLinkedList.Tests
             //assert
             Assert.AreEqual<bool>(expected, actual);
         }
+    }
+
+    [TestClass]
+    public class ParenthesesVerifierTests1_1 : ParenthesesVerifierTests1<ParenthesesVerifier>
+    {
+
+    }
+
+    [TestClass]
+    public class ParenthesesVerifierTests1_2 : ParenthesesVerifierTests1<ParenthesesVerifier2>
+    {
+
     }
 }
