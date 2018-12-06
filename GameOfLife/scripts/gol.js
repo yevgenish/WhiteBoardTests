@@ -57,6 +57,10 @@ var GOL = function (gridHelper) {
         var liveAmount = 0;
         var deadAmount = 0;
 
+        // 0 | 1 | 2
+        // 3 | e | 4
+        // 5 | 6 | 7
+
         for (var i = 0; i < 7; i++) {
             var x, y;
             if (i == 0) {
