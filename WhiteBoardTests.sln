@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2048
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree", "BinaryTree\BinaryTree.csproj", "{059097C3-6CEB-4A33-BEF8-DF8023649E0B}"
 EndProject
@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GameOfLife(5)", "GameOfLife\", "{937AEC6C-54C0-4BBE-B122-51ED38A5C416}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GameOfLife", "GameOfLife\", "{937AEC6C-54C0-4BBE-B122-51ED38A5C416}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_56578"
@@ -47,6 +47,16 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twitter", "SharingApp\Twitter\Twitter.csproj", "{17B178A7-CD2F-41E9-9EFE-AAB677484B78}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VK", "SharingApp\VK\VK.csproj", "{0D5D6AEE-AF11-40C6-A16D-3917281F24D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{11ABDAA6-02BA-463D-AC1D-21D04F34CC42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TupleStartStopSelect", "TupleStartStopSelect", "{37CCF335-663B-4A22-8751-AB0C1674B619}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\TupleStartStopSelect\init_db.sql = SQL\TupleStartStopSelect\init_db.sql
+		SQL\TupleStartStopSelect\loop_table.sql = SQL\TupleStartStopSelect\loop_table.sql
+		SQL\TupleStartStopSelect\requirements.png = SQL\TupleStartStopSelect\requirements.png
+		SQL\TupleStartStopSelect\solution_cursor_01.sql = SQL\TupleStartStopSelect\solution_cursor_01.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -100,6 +110,7 @@ Global
 		{E67DFE9C-513B-4602-9058-FFEC0EB4EE6F} = {80BECCB1-49C2-4DA7-946D-1B87E6FE223F}
 		{17B178A7-CD2F-41E9-9EFE-AAB677484B78} = {80BECCB1-49C2-4DA7-946D-1B87E6FE223F}
 		{0D5D6AEE-AF11-40C6-A16D-3917281F24D9} = {80BECCB1-49C2-4DA7-946D-1B87E6FE223F}
+		{37CCF335-663B-4A22-8751-AB0C1674B619} = {11ABDAA6-02BA-463D-AC1D-21D04F34CC42}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1CFEB01-B01D-4E3A-A404-F1CF122965CB}
